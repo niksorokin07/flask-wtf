@@ -1,0 +1,21 @@
+ul {
+   color: #000000;
+   margin-left: 20px;
+   margin-right: auto;
+   font-size: 20px;
+   list-style-type: none;
+}
+li {
+   color: #333333;
+   margin-left: 5px;
+   margin-right: auto;
+   font-size: 20px;
+}
+h1 {
+   color: #000000;
+}
+h4 {
+   color: #AAAAAA;
+   margin-left: 20px;
+   margin-right: auto;
+}

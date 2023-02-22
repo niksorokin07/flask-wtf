@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style2.css') }}" />
+<body>
+    <h1 id="distr_h1">Размещение по каютам</h1>
+    {% set room = "Каюта №" %}
+    <ul>
+        {% for el in list %}
+        <li>{{ el }} - {{room}}{{ loop.index }} {% if loop.first %} -- каюта капитана {% endif %}</li>
+        {% endfor %}
+    </ul>
+</body>
+{% endblock %}

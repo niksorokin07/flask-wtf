@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style3.css') }}" />
+<h1 id="tables_h1">Оформление каюты</h1>
+<body>
+<table>
+  <tr>
+    <th>Каюта</th>
+    <th>Эмблема</th>
+  </tr>
+  {% if type == 1 %}
+    <tr>
+      <td><img src="https://www.photos-public-domain.com/wp-content/uploads/2012/05/forest-green-paper-texture.jpg" width=300 height=500></td>
+      <td><img src="https://wonder-day.com/wp-content/uploads/2021/02/wonder-day-monster-58.jpg" width=300 height=500></td>
+    </tr>
+  {% elif type == 2 %}
+    <tr>
+      <td><img src="https://catherineasquithgallery.com/uploads/posts/2021-12/1639757672_26-catherineasquithgallery-com-p-fon-rozovo-zheltii-nezhnii-35.jpg" width=300 height=500></td>
+      <td><img src="https://avatars.mds.yandex.net/i?id=93e61b9ec6dbbefa525e247bd93faa35f7cc59bf-8342321-images-thumbs&n=13&exp=1" width=300 height=500></td>
+    </tr>
+  {% elif type == 3 %}
+    <tr>
+      <td><img src="https://catherineasquithgallery.com/uploads/posts/2021-02/1613213784_120-p-tsvetnoi-fon-sinii-165.jpg" width=300 height=500></td>
+      <td><img src="https://vsemnarisovat.ru/wp-content/uploads/2015/12/how-to-draw-a-gray-alien-the-grays-step-12_1_000000168097_5.png" width=300 height=500></td>
+    </tr>
+  {% elif type == 4 %}
+    <tr>
+      <td><img src="https://www.centrmag.ru/catalog/b14_291220_3d_z.jpg" width=300 height=500></td>
+      <td><img src="https://vsemnarisovat.ru/wp-content/uploads/2015/12/how-to-draw-a-gray-alien-the-grays-step-12_1_000000168097_5.png" width=300 height=500></td>
+    </tr>
+  {% elif type == 5 %}
+    <p>Invalid data</p>
+  {% endif %}
+</table>
+</body>
+{% endblock %}

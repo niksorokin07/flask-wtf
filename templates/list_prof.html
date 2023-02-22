@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prof</title>
+</head>
+<body>
+<h1>И на марсе будут яблони цвести!</h1>
+    {% if type == 2 %}
+    <ul>
+        {% for el in list %}
+        <li>{{ el }}</li>
+        {% endfor %}
+    </ul>
+    {% elif type == 1 %}
+    <ol>
+        {% for el in list %}
+        <li>{{ el }}</li>
+        {% endfor %}
+    </ol>
+    {% else %}
+    <h2>Incorrect parameters</h2>
+    {% endif %}
+</body>
+</html>

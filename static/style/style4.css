@@ -1,0 +1,17 @@
+#galery_h1 {
+   margin-left: 600px;
+   margin-right: auto;
+}
+carousel_inner {
+   margin-left: 350px;
+   margin-right: auto;
+}
+#C {
+    max-width: 800px;
+    max-height: 600px;
+}
+#post {
+    margin-left: 600px;
+    margin-right: auto;
+    font-size: 20px;
+}

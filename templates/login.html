@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style1.css') }}" />
+<h1 id="login_h1">Авторизация</h1>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.astronaut_id.label }}<br>
+        {{ form.astronaut_id(class="form-control") }}<br>
+        {% for error in form.astronaut_id.errors %}
+            <div class="alert alert-danger" role="alert">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.astronaut_password.label }}<br>
+        {{ form.astronaut_password(class="form-control", type="password") }}<br>
+        {% for error in form.astronaut_password.errors %}
+            <div class="alert alert-danger" role="alert">{{ error }}</div>
+        {% endfor %}
+    <div>
+        {{ form.captain_id.label }}<br>
+        {{ form.captain_id(class="form-control") }}<br>
+        {% for error in form.captain_id.errors %}
+            <div class="alert alert-danger" role="alert">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.captain_password.label }}<br>
+        {{ form.captain_password(class="form-control", type="password") }}<br>
+        {% for error in form.captain_password.errors %}
+            <div class="alert alert-danger" role="alert">{{ error }}</div>
+        {% endfor %}
+    </div>
+    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+</form>
+{% endblock %}
