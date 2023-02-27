@@ -31,11 +31,11 @@ app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 app.config['UPLOAD_FOLDER'] = "static/uploads"
 
 
-@app.route('/')
-@app.route('/index')
-def index():
+@app.route('/<name>')
+@app.route('/index/<name>')
+def index(name):
     param = {}
-    param["title"] = "q"
+    param["title"] = name
     return render_template('base.html', **param)
 
 
@@ -131,8 +131,6 @@ def gallery():
         if file and allowed_file(file):
             filename = secure_filename(file)
             file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            print(file_path)
-            file.save(file_path)
             return render_template('gallery.html', form=form)
     return render_template('gallery.html', form=form)
 
